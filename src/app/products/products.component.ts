@@ -5,11 +5,36 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+// export class ProductsComponent implements OnInit {
 
-  constructor() { }
+//   constructor() { }
 
-  ngOnInit(): void {
-  }
+//   ngOnInit(): void {
+//   }
 
+// }
+export class ProductsComponent {
+  title = 'my-app';
+  productName: string = "Product A";
+  productPrice: number = 2002;
+  productStatus: boolean = false;
+  productInfo: {id: number, price: number, name: string} ={
+    id: 1,
+    name: "Product A",
+    price: 2002
+  };
+  productList: {id:number, price:number, name:string, status:boolean}[] = [
+    {
+      id: 1,
+      name: "Product A",
+      price: 2002,
+      status:false
+    },
+    {
+      id: 2,
+      name: "Product B",
+      price: 2003,
+      status:true
+    }
+  ]
 }
