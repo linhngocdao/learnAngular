@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 //   }
 
 // }
+
 export class ProductsComponent {
   title = 'my-app';
   productName: string = "Product A";
@@ -37,4 +38,16 @@ export class ProductsComponent {
       status:true
     }
   ]
+  onClick(){
+    console.log('Click!');
+    this.productStatus = !this.productStatus
+  }
+  onRemove(id : number){
+    console.log(id);
+  this.productList = this.productList.filter(product => product.id != id);
+  }
+  onHandleKeyPress(event: any) {
+    console.log(event.target.value);
+    this.title = event.target.value;
+  }
 }
