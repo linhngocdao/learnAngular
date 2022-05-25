@@ -1,6 +1,7 @@
-{{product | json}}
-<form (ngSubmit)="onSubmit()">
-  <input type="text" [(ngModel)]="product.name" placeholder="name" name="name" >
-  <input type="text" [(ngModel)]="product.price" placeholder="price" name="name" >
+<button class = "btn btn-primary" routerLink="/product" >Return</button>
+<form (ngSubmit)="onAddProduct()">
+  <input type="text" [(ngModel)]="product.name" placeholder="name" name="name" ><br>
+  <input type="number" [(ngModel)]="product.price" placeholder="price" name="name" ><br>
+  <input type="text" [(ngModel)]="product.desc" placeholder="desc" name="name" ><br>
   <button>Add</button>
 </form>

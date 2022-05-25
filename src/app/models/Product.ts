@@ -1,6 +1,6 @@
-export interface IProduct{
-  id: number,
-  name: string,
-  price: number,
-  status: boolean
+export interface IProduct {
+    id: number | string,
+    name: string,
+    price: number,
+    desc: string
 }

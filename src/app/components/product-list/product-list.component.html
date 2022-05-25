@@ -1,0 +1,23 @@
+<!-- <p>product-list works!</p> -->
+<button class="btn btn-primary"routerLink="/product/add">Thêm sản phẩm</button><br> <br>
+<table class="table table-bordered">
+    <tbody>
+        <tr *ngFor="let product of products; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.desc }}</td>
+            <td>
+                <button class="btn btn-info"(click)=" onGetProduct(product.id)" >Info</button>
+                <button class="btn btn-primary"routerLink="/product/{{ product.id }}">Detail</button>
+                <button class="btn btn-danger" (click)="onRemoveProduct(product.id)">Remove</button>
+                <button class="btn btn-primary" routerLink="/product/{{ product.id }}/edit">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="productDetail">
+    {{ productDetail.name }}
+    {{ productDetail.price }}
+    {{ productDetail.desc }}
+</div>
