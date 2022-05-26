@@ -1,23 +1,42 @@
-<!-- <p>product-list works!</p> -->
-<button class="btn btn-primary"routerLink="/product/add">Thêm sản phẩm</button><br> <br>
-<table class="table table-bordered">
+
+<button class="btn btn-primary"routerLink="/product/add">Thêm sản phẩm</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Stt</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
     <tbody>
         <tr *ngFor="let product of products; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{ product.name }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.desc }}</td>
-            <td>
-                <button class="btn btn-info"(click)=" onGetProduct(product.id)" >Info</button>
-                <button class="btn btn-primary"routerLink="/product/{{ product.id }}">Detail</button>
-                <button class="btn btn-danger" (click)="onRemoveProduct(product.id)">Remove</button>
-                <button class="btn btn-primary" routerLink="/product/{{ product.id }}/edit">Edit</button>
-            </td>
-        </tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.desc }}</td>
+        <td>
+            <button class="btn btn-info"(click)=" onGetProduct(product.id)" >Info</button><span class="p-2"></span>
+            <button class="btn btn-warning"routerLink="/product/{{ product.id }}">Detail</button><span class="p-2"></span>
+            <button class="btn btn-danger" (click)="onRemoveProduct(product.id)">Remove</button><span class="p-2"></span>
+            <button class="btn btn-primary" routerLink="/product/{{ product.id }}/edit">Edit</button>
+        </td>
+      </tr>
     </tbody>
-</table>
-<div *ngIf="productDetail">
+  </table>
+<!-- <div *ngIf="productDetail">
     {{ productDetail.name }}
     {{ productDetail.price }}
     {{ productDetail.desc }}
-</div>
+</div> -->
+
+<table class="table table-bordered">
+  <tbody>
+    <tr  *ngIf="productDetail">
+      <td>{{ productDetail.name }}</td>
+      <td>{{ productDetail.price }}</td>
+      <td>{{ productDetail.desc }}</td>
+    </tr>
+  </tbody>
+</table>

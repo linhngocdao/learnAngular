@@ -18,6 +18,7 @@ export class ProductDetailComponent implements OnInit {
     // this.productDetail = mockData.find(item => item.id == +id)!;
     this.productService.getProduct(+id).subscribe(data => {
       this.productDetail = data
+      
     })
   }
 

@@ -1,5 +1,19 @@
-<p>product-detail works!</p>
-{{ productDetail.name }}
-{{ productDetail.price }}
-{{ productDetail.desc }}
+<button class = "btn btn-primary" routerLink="/product" >Return</button>
+<h3>Chi tiết sản phẩm</h3>
 
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Desc</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>{{ productDetail.name }}</td>
+      <td>{{ productDetail.price }}</td>
+      <td>{{ productDetail.desc }}</td>
+    </tr>
+  </tbody>
+</table>

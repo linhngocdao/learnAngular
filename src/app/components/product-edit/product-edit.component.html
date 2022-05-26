@@ -1,7 +1,24 @@
-<p>product-edit works!</p>
+<!-- <p>product-edit works!</p>
 <form (ngSubmit)="onEditProduct()">
     <input type="text" [(ngModel)]="product.name" placeholder="name" name="name" >
     <input type="text" [(ngModel)]="product.price" placeholder="price" name="price" >
     <input type="text" [(ngModel)]="product.desc" placeholder="desc" name="desc" >
     <button>Add</button>
+  </form> -->
+
+  <form  (ngSubmit)="onEditProduct()" class="p-4">
+    <button class = "btn btn-primary" routerLink="/product" >Return</button>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="email" [(ngModel)]="product.name" class="form-control"  placeholder="Name" name="name" >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Price</label>
+      <input type="number" [(ngModel)]="product.price" class="form-control" placeholder="Price" name="price" >
+    </div> 
+    <div class="form-group">
+      <label for="exampleInputEmail1">Description</label>
+      <input type="text" [(ngModel)]="product.desc" class="form-control"  placeholder="Desc" name="desc" >
+    </div><br>
+    <button class="btn btn-primary">Update</button>
   </form>

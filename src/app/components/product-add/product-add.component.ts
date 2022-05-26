@@ -30,10 +30,10 @@ export class ProductAddComponent implements OnInit {
     this.productService.addProduct(this.product).subscribe(() => {
       this.routes.navigate(['product']);
     });
-    // if (this.product) {
-    //   alert('Product added successfully');
-    //   this.routes.navigate(['admin/product']);
-    // } 
+    if (this.product) {
+      alert('Product added successfully');
+      this.routes.navigate(['/product']);
+    } 
   }
 
 }

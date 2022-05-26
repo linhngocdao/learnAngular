@@ -11,6 +11,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { HomeComponent } from './components/home/home.component';
     ProductDetailComponent,
     NotFoundComponent,
     HomeComponent,
+    FooterComponent,
     
   ],
   imports: [
