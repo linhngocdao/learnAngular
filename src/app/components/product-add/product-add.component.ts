@@ -15,10 +15,12 @@ export class ProductAddComponent implements OnInit {
     price: 0,
     desc: ''
   };
-
+//khai báo từ models
   constructor(
     private productService: ProductService,
+    // gọi bên service sang
     private routes: Router
+    // next trang 
   ) { }
 
   ngOnInit(): void {

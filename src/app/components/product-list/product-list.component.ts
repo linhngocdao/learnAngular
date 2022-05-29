@@ -10,7 +10,6 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductListComponent implements OnInit {
 
-  statusShowDetail: boolean = false;
   products!: IProduct[];
   productDetail!: IProduct;
   constructor(private productService: ProductService) {}
@@ -25,7 +24,6 @@ export class ProductListComponent implements OnInit {
     })
   }
   onGetProduct(id: number | string) {
-    this.statusShowDetail = true;
     this.productService.getProduct(id).subscribe((data) => {
       this.productDetail = data;
     })

@@ -11,7 +11,8 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products; let i = index">
+        <tr *ngFor="let product of products; let i = index"> 
+          <!-- lặp giống map bên react -->
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ product.name }}</td>
         <td>{{ product.price }}</td>
