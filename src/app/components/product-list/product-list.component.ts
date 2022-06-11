@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.onGetAllProducts();
+    // chạy đầu tiên đên trang list
   }
 
   onGetAllProducts() {
